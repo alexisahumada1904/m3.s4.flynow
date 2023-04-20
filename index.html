@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <title>FlyNow</title>
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-black">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">FlyNow</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+          <a class="nav-link active" aria-current="page" href="#">Inicio</a>
+          <a class="nav-link" href="#">Características</a>
+          <a class="nav-link" href="#">Precios</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+<Main>
+<div class="bg-light">
+  <div class="text-center pt-5 col-6 mx-auto">
+    <h1>¿Adónde quieres ir?</h1>
+    <h6>Estás a sólo unos pasos de estar en el destino de tus sueños para tus vacaciones. A continuación cuéntanos adonde quieres ir. </h6>
+  </div>
+<div class="d-flex justify-content-center gap-3 pt-2">
+  <!-- ========== Start Origen lista ========== -->
+  <div class="col-3 text-center">
+    <h6 class="fw-bold">Origen:</h6>
+    <select id="listaOrigen" class="form-select" aria-label="Default select example">
+      <option value="1">Chicago, USA</option>
+      <option value="2">Venecia, IT</option>
+      <option value="3">Boston, USA</option>
+      <option value="4">Paris, FR</option>
+    </select>
+    <div class="pt-3">
+      <input id="fechaOrigen" class="w-100"type="date">
+    </div>
+  </div>
+  <!-- ========== End Origen lista ========== -->
+<!-- ========== Start Destino Lista ========== -->
+<div class="col-3 pb-5">
+  <h6 class="fw-bold">Destino:</h6>
+  <select id="listaDestino" class="form-select" aria-label="Default select example">
+    <option value="1">Chicago, USA</option>
+    <option value="2">Venecia, IT</option>
+    <option value="3">Boston, USA</option>
+    <option value="4">Paris, FR</option>
+  </select>
+  <div class="pt-3">
+    <input id="fechaDestino"  class="w-100"type="date">
+  </div>
+</div>
+</div>
+<!-- ========== End Destino Lista ========== -->
+
+</div>
+<div class="row justify-content-evenly text-center align-items-center g-2">
+  <div>
+    <h2 class="fw-bolder pt-4">Itinerario</h2>
+  </div>
+  <hr class="t2">
+  <!-- ========== Start Origen ========== -->
+  <div class="col-3">
+    <div class="gap-2 mt-1">
+      <div class="avion"><i class="bi bi-airplane-engines"></i></div>
+      <button type="button" name="" id="" class="btn bg-primary bg-opacity-25 t1">
+        <div id="fechaImprimirOrigen" class="text-primary fw-bold "></div></button>
+    </div>
+    <div class="pt-2">
+      <div class="vr"></div><br>
+      <div class="vr"></div><br>
+      <div class="vr"></div>
+    </div>
+  <div>
+    <h2 id="origenImprimir"></h2>
+    <button type="button" class="btn btn-primary">Ver más información</button>
+  </div>
+  </div>
+  <!-- ========== End Origen ========== -->
+<!-- ========== Start informacion ========== -->
+<div class="col-3 pt-5 mt-5 gap-2">
+  <div class="fs-1"><i class="bi bi-exclamation-circle"></i></div>
+    <div class="">|</div>
+    <div class="">|</div>
+    <div class="">|</div>
+    <div id="infoEscala">
+    </div>
+  </div>
+<!-- ========== End informacion ========== -->
+<!-- ========== Start Destino ========== -->
+<div class="col-3">
+  <div class="gap-2 mt-4">
+    <div class="avion2"><i class="bi bi-airplane-engines"></i></div>
+    <button type="button" name="" id="" class="btn bg-success bg-opacity-25 t1">
+      <div id="fechaImprimirDestino"class="text-success fw-bold "></div></button>
+  </div>
+  <div class="pt-2">
+    <div class="vr"></div><br>
+    <div class="vr"></div><br>
+    <div class="vr"></div>
+  </div>
+<div>
+  <h2 id="destinoImprimir"></h2>
+  <button type="button" class="btn btn-primary">Ver más información</button>
+</div>
+</div>
+<!-- ========== End Destino ========== -->
+</div>
+</Main>
+
+
+
+<!-- Option 1: Moment.js 2.29.4  -->
+<script src="https://momentjs.com/downloads/moment-with-locales.js"></script>
+<!-- Option 2: JQuery 3.6.4 min  -->
+<script src="https://code.jquery.com/jquery-3.6.4.min.js" integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
+<!-- Option 3: Bootstrap Bundle with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js" integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N" crossorigin="anonymous"></script>
+  <!-- Option 4: Main Js -->
+<script src="assets/js/main.js"></script>
+</body>
+</html>

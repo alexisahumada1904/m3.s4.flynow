@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+*{
+  font-family: 'Lato', sans-serif;
+}
+.t1{
+  z-index:101;
+  
+}
+.t2{
+  z-index: 100;
+  position: absolute;
+  transform: translate(0px,-10px);
+}
+.avion{
+  font-size: 2em;
+  transform: rotate(45deg);
+}
+.avion2{
+  font-size: 2em;
+  transform: rotate(135deg);
+}
